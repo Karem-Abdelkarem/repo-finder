@@ -3,13 +3,39 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="/github-mark-white.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Repo Finder</title>
 </head>
 
 <body>
-  <div id="app"></div>
+  <div class="container">
+    <header>
+      <p class="logo">repo-finder</p>
+      <img class="logo-img" src="public/github-mark-white.svg" alt="githun logo">
+    </header>
+    <div class="relative">
+      <div class="SearchForm">
+        <form class="form">
+          <div class="choices">
+            <label>
+              <input name="searchType" type="radio" value="users" checked /> Users
+            </label>
+            <label>
+              <input name="searchType" type="radio" value="org" /> Organizations</label>
+          </div>
+          <input type="text" class="input" placeholder="Search GitHub" aria-label="search-input" required />
+          <button class="button" type="submit">Search</button>
+        </form>
+      </div>
+
+      <div class="loader hidden"></div>
+
+      <p class="message"></p>
+    </div>
+
+    <div class="cards">Start your search...</div>
+  </div>
   <script type="module" src="/src/main.js"></script>
 </body>
 
