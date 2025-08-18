@@ -1,13 +1,10 @@
 :root {
-  --color-blue: #0079fe;
   --color-red: #ff2f2f;
   --color-white: #fff;
   --color-green: #08872b;
   --color-bg: #000;
   --color-container-bg: #101411;
   --color-form-bg: #232925;
-  --color-card: #1e2a48;
-  --color-card-dark: #141c2f;
   --color-box-shadow: #1f1f1f;
   --default-radius: 0.7rem;
   --margin-after-form: 4rem;
@@ -46,6 +43,11 @@ body {
   border-radius: var(--default-radius);
   padding: 2rem;
   box-shadow: 0px 4px 10px 10px var(--color-box-shadow);
+
+  @media (max-width: 426px) {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
 }
 
 header {
@@ -60,11 +62,21 @@ header {
   padding-bottom: 4rem;
   font-size: 2.5rem;
   text-align: center;
+
+  @media (max-width: 426px) {
+    font-size: 2rem;
+  }
 }
 
 .logo-img {
   width: 3rem;
   height: 3rem;
+
+  @media (max-width: 426px) {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.1rem;
+  }
 }
 
 .relative {
@@ -79,6 +91,10 @@ header {
   background-color: var(--color-form-bg);
   padding: 0.5rem 0.5rem 0.5rem 2rem;
   border-radius: var(--default-radius);
+
+  @media (max-width: 376px) {
+    padding: 0.5rem;
+  }
 }
 
 .choices {
@@ -87,6 +103,10 @@ header {
   top: -2.8rem;
   display: flex;
   gap: 1.5rem;
+
+  @media (max-width: 426px) {
+    font-size: 1.2rem;
+  }
 }
 
 .input {
@@ -101,6 +121,11 @@ header {
   border: none;
   outline: none;
   color: var(--color-white);
+
+  @media (max-width: 426px) {
+    font-size: 1.2rem;
+    padding: 1rem 0rem 1rem 2.4rem;
+  }
 }
 
 .button {
@@ -112,6 +137,10 @@ header {
   font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
+
+  @media (max-width: 376px) {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .loader {
@@ -158,4 +187,41 @@ header {
   justify-content: space-between;
   gap: 2rem;
   margin-top: var(--margin-after-form);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 30%;
+  overflow: hidden;
+  gap: 1rem;
+
+  @media (max-width: 426px) {
+    flex-basis: 45%;
+  }
+}
+
+.img {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+
+  @media (max-width: 426px) {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+.name {
+  font-size: 1.6rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+
+  @media (max-width: 426px) {
+    font-size: 1.2rem;
+  }
 }
